@@ -1,6 +1,13 @@
 ## fashionAI 服装关键点检测
 
+> 天池算法大赛服装关键点检测，给定五种类型的服装，采用人体姿态估计的方法检测关键点。
+
 ### 0.效果预览
+
+<figure class="half">
+    <img src="./img/0b859e16e745aceead46605218202c5f.jpg">
+    <img src="./img/997af8563bc0c54b9d46941dd1924626.jpg">
+</figure>
 
 ### 1.模型
 
@@ -9,6 +16,8 @@
 RGB图像送入两个分支网络分别计算，最后concat二者的特征图，具体结构如图所示。
 
 添加了soft-argmax层，可以由热点图转化到具体的坐标值，用坐标值groundtruth监督学习
+
+![](./img/model.jpg)
 
 ### 2.策略
 
@@ -22,7 +31,7 @@ RGB图像送入两个分支网络分别计算，最后concat二者的特征图�
 
 - 优化器Adam，学习率1e-3，每过10个epoch乘0.1，CPN的残差网络部分，学习率为全局学习率的0.1倍。
 
-- 初始化，HG用了开源的一个人体姿态估计参数初始化，CPN残差部分用Imagenet预训练参数。
+- 初始化，HG用了[开源](https://github.com/bearpaw/pytorch-pose)的一个人体姿态估计参数初始化，CPN残差部分用Imagenet预训练参数。
 
 - 高斯热点图的亮块大小为13x13，输入图像512，输出热点图大小128
 
