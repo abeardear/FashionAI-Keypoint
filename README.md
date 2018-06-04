@@ -1,13 +1,13 @@
 ## fashionAI 服装关键点检测
 
-> 天池算法大赛服装关键点检测，给定五种类型的服装，采用人体姿态估计的方法检测关键点。最终结果排名24，CPN模型没有复现很好，略遗憾...
+> [天池算法大赛服装关键点检测](https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.100066.0.0.6acd33afhORePt&raceId=231648)，给定五种类型的服装，采用人体姿态估计的方法检测关键点。最终结果排名24，CPN模型没有复现很好，略遗憾...
 
 ### 0.效果预览
 
-<figure class="half">
-    <img src="./img/0b859e16e745aceead46605218202c5f.jpg">
-    <img src="./img/997af8563bc0c54b9d46941dd1924626.jpg">
-</figure>
+![](./img/0b859e16e745aceead46605218202c5f.jpg)
+![](./img/997af8563bc0c54b9d46941dd1924626.jpg)
+![](./img/785a5b843e6349c4ceceb34de68e71c0.jpg)
+
 
 ### 1.模型
 
